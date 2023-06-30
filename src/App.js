@@ -14,10 +14,10 @@ function TodoApp() {
 
   useEffect(() => {
     localStorage.setItem("tasks", JSON.stringify(tasksList));
-    document.title = `To-Do List (${tasksList.filter((task) => !task.completed).length
-      } tasks remaining)`;
+    document.title = `To-Do List (${
+      tasksList.filter((task) => !task.completed).length
+    } tasks remaining)`;
   }, [tasksList]);
-
 
   const handleSubmit = (e) => {
     e.preventDefault();
